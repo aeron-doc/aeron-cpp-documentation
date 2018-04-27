@@ -66,7 +66,8 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a href="https://gitter.im/real-logic/Aeron?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"></a> To chat with other Aeron users and the contributors.</p>
-<p>Efficient reliable UDP unicast, UDP multicast, and IPC message transport. Java and C++ clients are available in this repository, and a <a href="https://github.com/AdaptiveConsulting/Aeron.NET">.NET client</a> is available from a 3rd party. All three clients can exchange messages across machines, or on the same machine via IPC, very efficiently. Streams can be recorded to an Archive for later replay.</p>
+<p><a href="http://www.javadoc.io/doc/io.aeron/aeron-client"></a></p>
+<p>Efficient reliable UDP unicast, UDP multicast, and IPC message transport. Java and C++ clients are available in this repository, and a <a href="https://github.com/AdaptiveConsulting/Aeron.NET">.NET client</a> is available from a 3rd party. All three clients can exchange messages across machines, or on the same machine via IPC, very efficiently. Message streams can be recorded by the <a href="https://github.com/real-logic/aeron/tree/master/aeron-archive">Archive</a> module to persistent storage for later or real-time replay.</p>
 <p>Performance is the key focus. Aeron is designed to be the highest throughput with the lowest and most predictable latency possible of any messaging system. Aeron integrates with <a href="https://github.com/real-logic/simple-binary-encoding">Simple Binary Encoding (SBE)</a> for the best possible performance in message encoding and decoding. Many of the data structures used in the creation of Aeron have been factored out to the <a href="https://github.com/real-logic/agrona">Agrona</a> project.</p>
 <p>For details of usage, protocol specification, FAQ, etc. please check out the <a href="https://github.com/real-logic/aeron/wiki">Wiki</a>.</p>
 <p>For those who prefer to watch a video then try <a href="https://www.youtube.com/watch?v=tM4YskS94b0">Aeron Messaging</a> from StrangeLoop 2014. Things have moved on quite a bit with performance and some features but the basic design still applies.</p>
@@ -91,7 +92,7 @@ $(function() {
 <li><a href="https://github.com/real-logic/aeron/wiki/Channel-Configuration">Channel Specific Configuration</a></li>
 </ol>
 <ol type="1">
-<li><a href="https://github.com/real-logic/aeron/wiki/Aeron-Archive">Aeron Archive</a></li>
+<li><a href="https://github.com/real-logic/aeron/wiki/Aeron-Archive">Aeron Archive (Persistent Stream Storage)</a></li>
 </ol>
 <h3>How does Aeron work?</h3>
 <ol type="1">
@@ -123,7 +124,7 @@ $(function() {
 <ul>
 <li>Latest stable <a href="http://www.oracle.com/technetwork/java/">Oracle JDK 8</a>, Java versions before 1.8.0_65 are very buggy and can cause tests to fail.</li>
 </ul>
-<p>You must first build and install <a href="https://github.com/real-logic/agrona">Agrona</a> and <a href="https://github.com/real-logic/simple-binary-encoding">Simple Binary Encoding (SBE)</a> into the local maven repository</p>
+<p>You must first build and install <a href="https://github.com/real-logic/agrona">Agrona</a> and <a href="https://github.com/real-logic/simple-binary-encoding">Simple Binary Encoding (SBE)</a> into the local maven repository <b>if</b> the current master for Aeron depends on changes to Agrona or SBE. However we will try to not have this as the normal case.</p>
 <div class="fragment"><div class="line">$ ./gradlew</div></div><!-- fragment --><p>After Agrona &amp; SBE is compiled and installed, then you can build Aeron.</p>
 <p>Full clean and build of all modules</p>
 <div class="fragment"><div class="line">$ ./gradlew</div></div><!-- fragment --><h3>C++ Build</h3>
@@ -172,7 +173,7 @@ $(function() {
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 16 2018 19:20:33 for Aeron by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 27 2018 13:34:45 for Aeron by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['length',['length',['../classaeron_1_1concurrent_1_1logbuffer_1_1_buffer_claim.html#a183d39fee4fea96a51fecef893163493',1,'aeron::concurrent::logbuffer::BufferClaim']]]
+  ['joinposition',['joinPosition',['../classaeron_1_1_image.html#a9ae4b37ae643ecff292f408d943b30ef',1,'aeron::Image']]]
 ];

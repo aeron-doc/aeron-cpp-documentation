@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_context_8h_source.html">Context.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="aeron-client_2src_2main_2cpp_2_context_8h_source.html">Context.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -94,6 +94,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad0376e9dfd4f6fb17c857135b0654b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88e7a359895168698dcc5e00f437fb42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classaeron_1_1_context.html">this_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaeron_1_1_context.html#a88e7a359895168698dcc5e00f437fb42">newPublicationHandler</a> (const <a class="el" href="namespaceaeron.html#a88495c563a744839ac2e4a2e7c586696">on_new_publication_t</a> &amp;handler)</td></tr>
 <tr class="separator:a88e7a359895168698dcc5e00f437fb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf1a9594d54d873fba154a0f2c29cf03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classaeron_1_1_context.html">this_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaeron_1_1_context.html#abf1a9594d54d873fba154a0f2c29cf03">newExclusivePublicationHandler</a> (const <a class="el" href="namespaceaeron.html#a88495c563a744839ac2e4a2e7c586696">on_new_publication_t</a> &amp;handler)</td></tr>
+<tr class="separator:abf1a9594d54d873fba154a0f2c29cf03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42bc49cbfcb76126becc6e64dddc4a2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classaeron_1_1_context.html">this_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaeron_1_1_context.html#a42bc49cbfcb76126becc6e64dddc4a2f">newSubscriptionHandler</a> (const <a class="el" href="namespaceaeron.html#a54afae347b0e75d0105ee7f72efee996">on_new_subscription_t</a> &amp;handler)</td></tr>
 <tr class="separator:a42bc49cbfcb76126becc6e64dddc4a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8dc0fba06780d27b92d86f2160d122f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classaeron_1_1_context.html">this_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaeron_1_1_context.html#aa8dc0fba06780d27b92d86f2160d122f">availableImageHandler</a> (const <a class="el" href="namespaceaeron.html#a15cd77f437cd11dd5f0514756b4ed5fe">on_available_image_t</a> &amp;handler)</td></tr>
@@ -334,6 +336,41 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Aeron</b></td></tr>
 
 </div>
 </div>
+<a id="abf1a9594d54d873fba154a0f2c29cf03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1a9594d54d873fba154a0f2c29cf03">&#9670;&nbsp;</a></span>newExclusivePublicationHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classaeron_1_1_context.html">this_t</a>&amp; aeron::Context::newExclusivePublicationHandler </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceaeron.html#a88495c563a744839ac2e4a2e7c586696">on_new_publication_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the handler for successful <a class="el" href="classaeron_1_1_aeron.html#ac3682dad891c0ec48abea895fab98aaf">Aeron::addExclusivePublication</a> notifications</p>
+<p>If not set, then will use newPublicationHandler instead.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td>called when add is completed successfully </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>reference to this <a class="el" href="classaeron_1_1_context.html">Context</a> instance </dd></dl>
+
+</div>
+</div>
 <a id="a88e7a359895168698dcc5e00f437fb42"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88e7a359895168698dcc5e00f437fb42">&#9670;&nbsp;</a></span>newPublicationHandler()</h2>
 
@@ -542,12 +579,12 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Aeron</b></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/deniz/work/thirdparty/aeron/aeron-client/src/main/cpp/<a class="el" href="_context_8h_source.html">Context.h</a></li>
+<li>/home/deniz/work/thirdparty/aeron/aeron-client/src/main/cpp/<a class="el" href="aeron-client_2src_2main_2cpp_2_context_8h_source.html">Context.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 16 2018 19:20:32 for Aeron by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 27 2018 13:34:44 for Aeron by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>
